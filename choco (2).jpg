@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>등록 완료</title>
+</head>
+
+<body style="text-align:center; font-family:Arial;">
+
+<h1>🐶 펫넷</h1>
+<hr>
+
+<a href="index.html">홈</a> |
+
+<a href="register.html">반려견 등록</a> |
+
+<a href="lost.html">분실 신고</a>
+
+<hr>
+<h2>등록 완료!</h2>
+
+<p>
+반려견 정보가 등록되었습니다.
+</p>
+
+<p>
+QR 생성 단계로 이동할 준비가 되었습니다.
+</p>
+<img src="qr.png" width="200">
+
+<p>
+반려견 전용 QR이 생성되었습니다.
+</p>
+<a href="index.html">
+<button>메인으로 돌아가기</button>
+</a>
