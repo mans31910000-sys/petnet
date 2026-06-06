@@ -6,25 +6,58 @@
 <title>반려견 정보</title>
 </head>
 
-<body style="text-align:center; font-family:Arial; background-color:#f5f9ff;">
+<body style="text-align:center; font-family:Arial; background-color:#f5f9ff; padding:20px;">
 
-<h1>🐶 펫넷</h1>
+<div style="background:white; padding:25px; border-radius:15px; max-width:420px; margin:auto;">
 
-<p>반려견 정보를 불러오는 중입니다.</p>
+<h1 style="color:#0066cc;">🐶 펫넷 등록 반려견</h1>
 
-<h2 id="petId"></h2>
+<h2 id="petNumber" style="color:#ff8800;">불러오는 중...</h2>
+
+<p id="name"></p>
+<p id="breed"></p>
+<p id="gender"></p>
+<p id="feature"></p>
+
+<p style="color:green;"><b>이 반려견은 펫넷에 등록되어 있습니다.</b></p>
+
+<a id="phoneLink" href="#">
+<button style="width:80%; height:55px; background:#66cc66; color:white; font-size:18px; border:none; border-radius:10px;">
+📞 보호자 연락하기
+</button>
+</a>
+
+<br><br>
 
 <a href="index.html">
 <button style="width:80%; height:50px; font-size:18px;">
-홈으로 돌아가기
+🏠 펫넷 홈으로
 </button>
 </a>
+
+</div>
 
 <script>
 var params = new URLSearchParams(window.location.search);
 var petId = params.get("id");
 
-document.getElementById("petId").innerText = petId;
+function showPet(data) {
+  if (data.error) {
+    document.getElementById("petNumber").innerText = "등록 정보를 찾을 수 없습니다.";
+    return;
+  }
+
+  document.getElementById("petNumber").innerText = data.petNumber;
+  document.getElementById("name").innerHTML = "<b>이름:</b> " + data.name;
+  document.getElementById("breed").innerHTML = "<b>품종:</b> " + data.breed;
+  document.getElementById("gender").innerHTML = "<b>성별:</b> " + data.gender;
+  document.getElementById("feature").innerHTML = "<b>특징:</b> " + data.feature;
+  document.getElementById("phoneLink").href = "tel:" + data.phone;
+}
+
+var script = document.createElement("script");
+script.src = "https://script.google.com/macros/s/AKfycbxxS-o0PaeURCt_Uj9DnwcjtdBj-3zjFl5dxPWFTwMbQhAyMEnOtmYc9xK57chq5bq3yQ/exec?id=" + petId + "&callback=showPet";
+document.body.appendChild(script);
 </script>
 
 </body>
