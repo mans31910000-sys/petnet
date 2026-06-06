@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>반려견 정보</title>
+</head>
+
+<body style="text-align:center; font-family:Arial; background-color:#f5f9ff;">
+
+<h1>🐶 펫넷</h1>
+
+<p>반려견 정보를 불러오는 중입니다.</p>
+
+<h2 id="petId"></h2>
+
+<a href="index.html">
+<button style="width:80%; height:50px; font-size:18px;">
+홈으로 돌아가기
+</button>
+</a>
+
+<script>
+var params = new URLSearchParams(window.location.search);
+var petId = params.get("id");
+
+document.getElementById("petId").innerText = petId;
+</script>
+
+</body>
+</html>
