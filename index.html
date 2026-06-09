@@ -1,141 +1,244 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-<head>
 <meta charset="utf-8">
 
 <meta name="google-site-verification" content="Ot_ryA3WRG5nXIdNoy3CpTExMA3PwmiFQNCPnFIN6-4" />
 
 <title>펫넷</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:linear-gradient(180deg,#ffffff 0%,#f5f9ff 100%);
+    color:#0f2340;
+    text-align:center;
+}
+
+.header{
+    padding:35px 15px 10px;
+}
+
+.logo{
+    width:320px;
+    max-width:90%;
+}
+
+.hero{
+    padding:25px 20px 10px;
+}
+
+.hero h1{
+    font-size:34px;
+    line-height:1.45;
+    margin:25px 0 18px;
+    font-weight:800;
+}
+
+.hero h1 span{
+    color:#005bd8;
+}
+
+.hero p{
+    font-size:21px;
+    line-height:1.7;
+    color:#1f2f45;
+    margin:0 0 25px;
+}
+
+.small-text{
+    font-size:19px;
+    color:#005bd8;
+    font-weight:bold;
+    margin-bottom:35px;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    max-width:950px;
+    margin:0 auto 35px;
+}
+
+.card{
+    background:white;
+    width:250px;
+    min-height:135px;
+    padding:28px 18px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.icon{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.card-title{
+    font-size:20px;
+    font-weight:bold;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+.card-text{
+    font-size:15px;
+    color:#4d5d73;
+    line-height:1.5;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:24px;
+    flex-wrap:wrap;
+    margin:20px auto 45px;
+    max-width:900px;
+}
+
+.btn{
+    display:inline-block;
+    width:330px;
+    padding:20px 15px;
+    border-radius:15px;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    box-sizing:border-box;
+}
+
+.primary{
+    background:#005bd8;
+    color:white;
+    box-shadow:0 10px 25px rgba(0,91,216,0.25);
+}
+
+.secondary{
+    background:white;
+    color:#005bd8;
+    border:2px solid #005bd8;
+}
+
+.count{
+    margin:35px 0 20px;
+}
+
+.count h2{
+    font-size:19px;
+    font-weight:500;
+    margin-bottom:8px;
+}
+
+.count strong{
+    font-size:54px;
+    color:#005bd8;
+    letter-spacing:1px;
+}
+
+.footer{
+    padding:25px 15px 45px;
+    color:#4d5d73;
+    font-size:17px;
+}
+
+@media(max-width:700px){
+    .header{
+        padding-top:30px;
+    }
+
+    .logo{
+        width:280px;
+    }
+
+    .hero h1{
+        font-size:26px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .small-text{
+        font-size:17px;
+    }
+
+    .card{
+        width:75%;
+    }
+
+    .btn{
+        width:85%;
+        font-size:20px;
+    }
+
+    .count strong{
+        font-size:40px;
+    }
+}
+</style>
 </head>
 
-<body style="text-align:center; font-family:Arial; background-color:#f5f9ff; margin:0;">
+<body>
 
-<h1 style="color:#0066cc; margin-top:20px;">🐶 펫넷</h1>
-
-<div style="background-color:#0066cc; padding:15px; line-height:2;">
-<a href="signup.html" style="color:white; text-decoration:none; font-weight:bold;">무료 회원가입</a> |
-<a href="login.html" style="color:white; text-decoration:none; font-weight:bold;">로그인</a> |
-<a href="my.html" style="color:white; text-decoration:none; font-weight:bold;">내 반려견 관리</a> |
-<a href="community.html" style="color:white; text-decoration:none; font-weight:bold;">커뮤니티</a>
+<div class="header">
+    <img src="petnet-logo.png" class="logo" alt="펫넷 로고">
 </div>
 
-<div style="
-background:linear-gradient(135deg,#fff3cd,#ffe4b5);
-padding:25px;
-margin:20px;
-border-radius:20px;
-border:3px solid #ff7a00;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-">
+<div class="hero">
 
-<h2 style="color:#ff6600; font-size:30px; margin-bottom:10px;">
-🐶 반려견을 위한 무료 QR 신분증
-</h2>
+    <h1>
+        반려견을 잃어버렸을 때,<br>
+        가장 필요한 것은 <span>빠른 연결</span>입니다.
+    </h1>
 
-<p style="font-size:22px; font-weight:bold; color:#333;">
-30초 안에 생성하고 바로 사용하세요
-</p>
+    <p>
+        QR 스캔 한 번으로<br>
+        발견자와 보호자를 연결합니다.
+    </p>
 
-<hr style="margin:20px 0; border:none; border-top:1px solid #ddd;">
+    <div class="small-text">
+        회원가입 없이, 약 30초 만에 QR 생성 가능
+    </div>
 
-<p style="font-size:18px;">✅ 회원가입 없이 QR 생성 가능</p>
-<p style="font-size:18px;">📱 앱 설치 없이 바로 사용 가능</p>
-<p style="font-size:18px;">🖨️ 출력 후 바로 사용 가능</p>
+    <div class="cards">
+        <div class="card">
+            <div class="icon">👤</div>
+            <div class="card-title">회원가입 없이<br>무료 생성</div>
+            <div class="card-text">복잡한 절차 없이<br>누구나 무료로 생성</div>
+        </div>
 
-<a href="register.html" style="
-background:#ff7a00;
-color:white;
-padding:18px 35px;
-border-radius:35px;
-font-size:24px;
-font-weight:bold;
-text-decoration:none;
-display:inline-block;
-box-shadow:0 4px 8px rgba(0,0,0,0.2);
-margin-top:10px;
-">
-🚀 무료 QR 생성하기
-</a>
+        <div class="card">
+            <div class="icon">📱</div>
+            <div class="card-title">앱 설치 없이<br>바로 사용</div>
+            <div class="card-text">별도 앱 설치 없이<br>QR 스캔으로 즉시 연결</div>
+        </div>
 
-<p style="margin-top:15px; color:#666; font-size:14px;">
-회원가입 없이도 바로 만들 수 있습니다
-</p>
+        <div class="card">
+            <div class="icon">🖨️</div>
+            <div class="card-title">출력 후<br>즉시 사용 가능</div>
+            <div class="card-text">출력하여 목걸이나<br>인식표에 부착하여 사용</div>
+        </div>
+    </div>
 
-</div>
+    <div class="buttons">
+        <a href="register.html" class="btn primary">🐾 초간단 무료 QR 생성하기</a>
+        <a href="my.html" class="btn secondary">📋 내 반려견 관리</a>
+    </div>
 
-<div style="background:white; padding:20px; border-radius:15px; margin:20px;">
-
-<div style="
-background:white;
-padding:30px;
-border-radius:15px;
-margin:20px;
-border-left:8px solid #0066cc;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
-">
-
-<h2 style="
-color:#0066cc;
-font-size:30px;
-line-height:1.6;
-margin-bottom:20px;
-">
-
-반려견을 잃어버렸을 때,<br>
-가장 필요한 것은 빠른 연결입니다.
-
-</h2>
-
-<p style="
-font-size:24px;
-font-weight:bold;
-color:#333;
-line-height:1.6;
-">
-
-QR 스캔 한 번으로<br>
-발견자와 보호자를 연결합니다.
-
-</p>
+    <div class="count">
+        <h2>현재 등록된 반려견 수</h2>
+        <strong>PET000040+</strong>
+    </div>
 
 </div>
 
-<p>
-펫넷과 함께 소중한 가족을 더 안전하게 지켜주세요.
-</p>
-
+<div class="footer">
+    🔒 개인정보 노출 없이 반려견 발견자와 보호자를 연결합니다.
 </div>
 
-<div style="background:white; padding:20px; border-radius:15px; margin:20px; border:2px solid #d9e8ff;">
-
-<h2 style="color:#0066cc;">
-🐶 펫넷 QR 사용법
-</h2>
-
-<p style="font-size:18px;">
-<b>① 무료 QR 생성</b><br>
-반려견 정보를 입력하고 QR을 생성하세요.
-</p>
-
-<p style="font-size:18px;">
-<b>② QR 저장 및 출력</b><br>
-생성된 QR을 휴대폰이나 컴퓨터에 저장하세요.<br><br>
-<b>출력 방법</b><br>
-집에 프린터가 있다면 바로 출력할 수 있습니다.<br>
-프린터가 없다면 문구점, 사진 출력점, 인쇄 가능한 매장 등에서 출력할 수 있습니다.<br><br>
-출력한 QR은 투명 테이프, 코팅지, 카드케이스 등을 이용해 물에 젖지 않게 보호하면 더 오래 사용할 수 있습니다.
-</p>
-
-<p style="font-size:18px;">
-<b>③ 반려견에게 부착</b><br>
-목걸이, 하네스 등 눈에 잘 보이는 곳에 부착하세요.
-</p>
-
-<p style="font-size:18px;">
-<b>④ 사용 준비 완료</b><br>
-이제 펫넷 QR을 사용할 수 있습니다.
-</p>
+</body>
+</html>
