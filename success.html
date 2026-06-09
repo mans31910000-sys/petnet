@@ -2,35 +2,95 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>등록 완료</title>
+<title>QR 생성 성공</title>
+
+<style>
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(to bottom,#fff9f0,#eef5ff);
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    border-radius:35px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.success{
+    font-size:56px;
+    color:#d96a00;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.desc{
+    font-size:24px;
+    color:#333;
+    margin-bottom:30px;
+}
+
+.qrimg{
+    width:420px;
+    max-width:95%;
+    display:block;
+    margin:0 auto 30px auto;
+}
+
+.guide{
+    font-size:22px;
+    color:#333;
+    line-height:1.8;
+    margin-top:20px;
+}
+
+.homebtn{
+    display:inline-block;
+    margin-top:35px;
+    padding:18px 45px;
+    background:#d96a00;
+    color:white;
+    text-decoration:none;
+    border-radius:15px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.homebtn:hover{
+    background:#bf5c00;
+}
+</style>
 </head>
 
-<body style="text-align:center; font-family:Arial;">
+<body>
 
-<h1>🐶 펫넷</h1>
-<hr>
+<div class="card">
 
-<a href="index.html">홈</a> |
+<div class="success">
+🎉 QR 생성 성공
+</div>
 
-<a href="register.html">반려견 등록</a> |
+<div class="desc">
+반려견 QR 신분증이 생성되었습니다.
+</div>
 
-<a href="lost.html">분실 신고</a>
+<img src="petnet_qr_design.png" class="qrimg" alt="펫넷 QR">
 
-<hr>
-<h2>등록 완료!</h2>
+<div class="guide">
+QR 스캔 시 보호자와 연결됩니다.<br>
+휴대폰 화면을 캡처하여 사용하세요.
+</div>
 
-<p>
-반려견 정보가 등록되었습니다.
-</p>
-
-<p>
-QR 생성 단계로 이동할 준비가 되었습니다.
-</p>
-<img src="qr.png" width="200">
-
-<p>
-반려견 전용 QR이 생성되었습니다.
-</p>
-<a href="index.html">
-<button>메인으로 돌아가기</button>
+<a href="index.html" class="homebtn">
+홈으로 돌아가기
 </a>
+
+</div>
+
+</body>
+</html>
